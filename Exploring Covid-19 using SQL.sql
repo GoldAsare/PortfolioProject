@@ -2,18 +2,13 @@ select *
 from PortfolioProject..Covid_Deaths
 order by 3,4
 
-select * 
-from PortfolioProject..Covid_Vaccinations
-order by 3,4
-
-
 select location, date, total_cases, new_cases, total_deaths, population
 from PortfolioProject..Covid_Deaths
 order by 1,2
 
 
 --Looking at deaths vs total cases
---Shows the likelihood of dying from contracting covid in ones country
+--Shows the likelihood of dying from contracting Covid in ones country
 
 select location, date, total_cases, total_deaths, 
 (total_deaths/total_cases) * 100 as DeathPercentage
